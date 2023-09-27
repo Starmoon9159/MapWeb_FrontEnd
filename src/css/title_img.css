@@ -1,0 +1,32 @@
+.image-container {
+    position: relative; /* 使文本相对于图像定位 */
+    width: 100%; /* 图像宽度自适应 */
+    height: 650px; /* 固定高度 */
+}
+
+/* 图像样式 */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* 图像充满容器并裁剪 */
+    z-index: 0;
+}
+
+.image-text {
+    position: absolute;
+    top:50%;
+    left: 50%; /* 左侧位置为容器的一半 */
+    transform: translateX(-50%); /* 通过transform属性将文本水平居中 */
+    color: white; /* 文本颜色 */
+    padding: 10px; /* 文本内边距 */
+    text-align: center; /* 文本居中对齐 */
+    font-size: 72px;
+    background: transparent; /* 去除背景颜色 */
+}
+
+/* 媒体查询 - 在屏幕宽度小于1000px时隐藏文本 */
+@media screen and (max-width: 1000px) {
+    .image-text {
+        display: none;
+    }
+}

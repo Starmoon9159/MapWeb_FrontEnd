@@ -1,0 +1,76 @@
+/* content.css */
+body {
+    background-color: #121212;
+    color: white;
+    display:inline;
+    text-align: center
+}
+
+/* 根据需要设置整体容器的样式 */
+.maps-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 水平居中 */
+
+}
+
+/* maps_box样式 */
+.maps_box {
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* 固定宽度为 300px */
+    min-height: 400px;
+    background-color: #212121;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 地图标题样式 */
+.maps_box p:first-child {
+    text-align: start;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-left: 16px;
+}
+
+/* 地图描述样式 */
+.maps_box p:nth-child(2) {
+    text-align: start;
+    color: white;
+    margin-left: 16px;
+    margin-top: 5px;
+}
+
+/* 其他信息样式，根据需要自行添加 */
+.maps_box p:nth-child(3),
+.maps_box p:nth-child(4) {
+    margin-left: 16px;
+    text-align: start;
+    margin-top: 5px;
+    font-style:unset;
+}
+
+.tag_box {
+    
+    font-weight: bold;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 3px 8px;
+    margin: 5px;
+    display: inline-flex;
+    float: left;
+    justify-content: flex-end;
+}
+
+/* 在小屏幕上，使用百分比设置高度 */
+@media screen and (max-width: 768px) {
+    .maps_box {
+        margin-top: 5%;
+        width: 90%; /* 设置宽度为90%，一行最多容纳一个 */
+        min-height: unset;
+    }
+}
